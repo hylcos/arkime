@@ -462,6 +462,12 @@ void moloch_db_save_session(MolochSession_t *session, int final)
         case MOLOCH_ROTATE_MONTHLY:
             snprintf(dbInfo[thread].prefix, sizeof(dbInfo[thread].prefix), "%02dm%02d", tmp.tm_year%100, tmp.tm_mon+1);
             break;
+        case MOLOCH_ROTATE_YEARLY:
+            snprintf(dbInfo[thread].prefix, sizeof(dbInfo[thread].prefix), "%04d", tmp.tm_year);
+            break;
+        case MOLOCH_ROTATE_NEVER:
+            snprintf(dbInfo[thread].prefix, sizeof(dbInfo[thread].prefix), "all", tmp.tm_year%100, tmp.tm_mon+1);
+            break;
         }
     }
 

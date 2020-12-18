@@ -415,6 +415,10 @@ void moloch_config_load()
         config.rotate = MOLOCH_ROTATE_WEEKLY;
     else if (strcmp(rotateIndex, "monthly") == 0)
         config.rotate = MOLOCH_ROTATE_MONTHLY;
+    else if (strcmp(rotateIndex, "yearly") == 0)
+        config.rotate = MOLOCH_ROTATE_YEARLY;
+    else if (strcmp(rotateIndex, "never") == 0)
+        config.rotate = MOLOCH_ROTATE_NEVER;
     else {
         printf("Unknown rotateIndex '%s'\n", rotateIndex);
         exit(1);

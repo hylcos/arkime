@@ -315,7 +315,9 @@ enum MolochRotate {
     MOLOCH_ROTATE_HOURLY12,
     MOLOCH_ROTATE_DAILY,
     MOLOCH_ROTATE_WEEKLY,
-    MOLOCH_ROTATE_MONTHLY };
+    MOLOCH_ROTATE_MONTHLY,
+    MOLOCH_ROTATE_YEARLY,
+    MOLOCH_ROTATE_NEVER };
 
 /* Field numbers are signed
  * [MOLOCH_FIELD_SPECIAL_MIN, -1)                 - Rules only, Op fields
